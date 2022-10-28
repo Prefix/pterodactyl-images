@@ -8,7 +8,7 @@ on:
     branches:
       - main
     paths:
-      - games/**
+      - impostor/**
       
 jobs:
   push:
@@ -32,8 +32,8 @@ jobs:
           password: ${{ secrets.REGISTRY_TOKEN }}
       - uses: docker/build-push-action@v2
         with:
-          context: ./games
-          file: ./games/${{ matrix.tag }}/Dockerfile
+          context: ./impostor
+          file: ./impostor/${{ matrix.tag }}/Dockerfile
           platforms: linux/amd64
           push: true
           tags: |
