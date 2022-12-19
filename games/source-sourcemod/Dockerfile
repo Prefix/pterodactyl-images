@@ -1,4 +1,4 @@
-FROM        debian:bullseye-slim
+FROM        ubuntu:18.04
 
 LABEL       author="Softwarenoob" maintainer="admin@softwarenoob.com"
 LABEL       org.opencontainers.image.source="https://github.com/Software-Noob/pterodactyl-images"
