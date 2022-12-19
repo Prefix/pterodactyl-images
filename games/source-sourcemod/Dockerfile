@@ -16,6 +16,7 @@ RUN         dpkg --add-architecture i386 \
             && locale-gen en_US.UTF-8
 
 RUN         dpkg --add-architecture i386 && \
+            apt-get update && \
             apt-get install -y libtcmalloc-minimal4:i386
 
 ENV         LC_ALL=en_US.UTF-8
