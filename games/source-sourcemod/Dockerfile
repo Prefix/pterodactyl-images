@@ -15,7 +15,7 @@ RUN         dpkg --add-architecture i386 \
             && useradd -m -d /home/container container \
             && locale-gen en_US.UTF-8
 
-RUN         apt-get install -y lib32gcc-s1
+RUN         apt-get install -y lib32gcc-s1 libtcmalloc-minimal4
 
 ENV         LC_ALL=en_US.UTF-8
 ENV         LANG=en_US.UTF-8
