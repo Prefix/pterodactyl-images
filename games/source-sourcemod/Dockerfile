@@ -15,9 +15,8 @@ RUN         dpkg --add-architecture i386 \
             && useradd -m -d /home/container container \
             && locale-gen en_US.UTF-8
 
-RUN         dpkg --add-architecture i386 && \
-            apt-get update && \
-            apt-get install -y libtcmalloc-minimal4:i386 libtcmalloc-minimal4
+RUN         apt-get update && \
+            apt-get install -y libtcmalloc-minimal4
 
 ENV         LC_ALL=en_US.UTF-8
 ENV         LANG=en_US.UTF-8
